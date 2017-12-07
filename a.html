@@ -21,19 +21,11 @@
 		mc.get('pinch').set({ enable: true });
 		var i=1;
 		mc.on("pinchout",function(){
+			
 			oDiv.innerHTML=i;
-			if(i>0.1){
-				i+=0.03;
-				oDiv.style.transform="scale("+i+")";
-			}
+			
 		});
-		mc.on("pinchin",function(){
-			oDiv.innerHTML=i;
-			if(i>0.1){
-				i-=0.03;
-				oDiv.style.transform="scale("+i+")";
-			}
-		});
+
 	</script>
 </body>
 </html>
