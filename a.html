@@ -20,9 +20,20 @@
 		var mc=new Hammer(oDiv);
 		mc.get('pinch').set({ enable: true });
 		var i=1;
-		mc.on("pinchout",function(){
-			
+		mc.on("pinchout",function(e){
+              if(i<3){
+              	   i+=0.01;
+              }
 			oDiv.innerHTML=i;
+			oDiv.style.transform="scale("+i+")";
+			
+		});
+		mc.on("pinchin",function(e){
+              if(i>0.1){
+              	   i-=0.01;
+              }
+			oDiv.innerHTML=i;
+			oDiv.style.transform="scale("+i+")";
 			
 		});
 
