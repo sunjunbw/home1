@@ -11,7 +11,7 @@
 			background: #ccc;
 		}
 	</style>
-	<script src=hammer.js></script>
+	<script src="hammer.js"></script>
 </head>
 <body>
 	<div class="box" id="box"></div>
@@ -21,12 +21,14 @@
 		mc.get('pinch').set({ enable: true });
 		var i=1;
 		mc.on("pinchout",function(){
+			oDiv.innerHTML=i;
 			if(i>0.1){
 				i+=0.03;
 				oDiv.style.transform="scale("+i+")";
 			}
 		});
 		mc.on("pinchin",function(){
+			oDiv.innerHTML=i;
 			if(i>0.1){
 				i-=0.03;
 				oDiv.style.transform="scale("+i+")";
