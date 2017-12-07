@@ -27,7 +27,7 @@
               if(i<3){
               	   i+=0.01;
               }
-			oDiv.innerHTML=(e.pointers[0].pageX-e.pointers[0].pageX)/100;
+			oDiv.innerHTML=(e.pointers[0].pageX-e.pointers[1].pageX)/100;
 			
 			oDiv.style.webkitTransform="scale("+i+")";
 			
@@ -36,7 +36,7 @@
               if(i>0.1){
               	   i-=0.01;
               }
-			oDiv.innerHTML=(e.pointers[0].pageX-e.pointers[0].pageX)/100;
+			oDiv.innerHTML=(e.pointers[0].pageX-e.pointers[1].pageX)/100;
 			oDiv.style.webkitTransform="scale("+i+")";
 			
 		});
